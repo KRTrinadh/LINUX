@@ -1,0 +1,66 @@
+/etc/passwd - users inforamtion
+
+/etc/shadow - users password information
+
+/etc/group - groups information
+
+/etc/gshadow - groups password information.
+
+ 
+
+Useradd <user_name> - to create users
+
+Useradd -d /home/harish -m harish
+
+Useradd -s /bin/bash harish
+
+Useradd -c 'comment' harish
+
+Useradd -u 1000 harish
+
+-G - secondary group
+
+Useradd -G g1 harish - create user and group with harish . Add user into group g1 
+
+-g - primary gorup
+
+Useradd -g g1 harish - create user with name harish and primary group name is g1
+
+ 
+
+For existing users information change -- Use usermod command
+
+ 
+
+Gpasswd <g1> - set password for group - it's encrypted passwod
+
+Gpasswd -r <g1> - Remove password for group
+
+Gpasswd -a <user1> <g1> - add user(user1) into group (g1)
+
+Gpasswd -d <user1> <g1> - delete user(user1) into group (g1)
+
+Gpasswd -M user1,user2,user3 <g1> - Addding morethan one user into the group.
+
+ 
+
+Even if we didn't set password for user or group … it should be display tild symbol
+
+If you set and remove then it displays "empty" filed
+
+ 
+
+Groupdel  <g1> - Delete group
+
+Userdel -rf <user1> - Delete user
+
+ 
+
+Groupmod -p harish <g1> - non encrypted password.
+
+Groupmod -n <new_group_name> <old_group_name>
+
+Groupmod -g <new_gid> <group_name>
+
+ 
+
