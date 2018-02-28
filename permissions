@@ -1,0 +1,93 @@
+Normal permissions  - to any files. Normal files, link files, directory file, birnary .
+
+Advanced permissions
+
+ 
+
+ 
+
+2 ways 1. numerical way . 2.charcter way
+
+We have 3 permissions
+
+    Read permission - 4     r
+    Write permission  2    w
+    Execute permission  1   x    = 7 means full permissions
+
+  
+
+-rw-r--r-- 1 pc(owner of file ) pc(group owner of the file,u1,u2,u3) 0 jan 20 18:59 2
+
+First filed is describe the type of the file  : - normal file. B - binary file. L - link file . D - directory
+
+Second file - permissions
+
+Thrid filed - link
+
+Forth filed - owner of the file
+
+Fifth filed - group owner fo the file
+
+6th filed is size - 0
+
+7th filed is date
+
+8 th field filename
+
+Rw-    owner of the file
+
+r--  group owner of the file. Which users are present in this group ..those users has these permissions
+
+r-- others (who are not member of  owner and group owner), u4 and u5 are others
+
+ 
+
+Normal user - creates a FILE what are the default permissions
+
+Super user creates a FILE what are the default permissions
+
+ 
+
+Normal user - creates a DIRECOTRY what are the default permissions
+
+Super user creates a DIRECTORY what are the default permissions
+
+ 
+
+Umask - User mask
+
+Normal user has own umask - 0002
+
+Super user has own umask  - 0022
+
+0  - advanced
+
+0 - owner of file file/dire
+
+2 - group of file/dire
+
+2 - others of file/
+
+ 
+
+Max permissions of file - 666  --- 0666
+
+max permissons of directory -  777  --- 0777
+
+ 
+
+Default permissions  = maximum permissions of file/directory - umask of use
+
+N - F  =  0666 - 0002 = 0664
+
+Rw-(6)   rw-(6)  r--(4) 
+
+N - D = 0777 - 0002=775
+
+ 
+
+S - F = 0666 - 0022 = 644
+
+S - D = 0777 - 0022 = 755
+
+ 
